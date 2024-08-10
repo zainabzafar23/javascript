@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            luxury brand feedback
+        </title>
+    </head>
+    <body>
+        <h1>
+            welcome to luxury brand products feedback
+        </h1>
+        <h2>
+            provide your feedback
+        </h2>
+        <label for="name">NAME: </label><br>
+        <input type="text" id="name" placeholder="your name" required><br>
+
+        <label for="age">AGE: </label><br>
+        <input type="number" id="age" placeholder="your age" required><br>
+
+        <label for="email">EMAIL: </label><br>
+        <input type="email" id="email" placeholder="your email" required><br>
+
+        <label for="job">JOB: </label><br>
+        <input type="text" id="job" placeholder="your job" required><br>
+
+        <label for="designation">DESIGNATION: </label><br>
+        <input type="text" id="designation" placeholder="your designation" required><br>
+
+        <label for="productType">PRODUCT TYPE: </label><br>
+        <select id="productType" required>
+            <option value="perfume">PERFUME</option>
+            <option value="cream">CREAM</option>
+            <option value="oils">OILS</option>
+        </select><br>
+
+        <label for="feedbackText">FEEDBACK: </label><br>
+        <textarea id="feedbackText" rows="5" cols="30" placeholder="enter your feedback" required></textarea><br>
+
+        <label for="userExperience">SHARE YOUR EXPERIENCE WITH US: </label><br>
+        <textarea id="userExperience" rows="4" cols="30" placeholder="enter your experinece with the product"></textarea><br>
+        
+        <button id="submitBtn">SUBMIT FEEDBACK</button>
+        
+        <hr>
+        <div id="userInfo" style="display: none;">
+            <h2>
+                user infromation:
+            </h2>
+            <p>name: <span id="userName"></span> </p>
+            <p>age: <span id="userAge"></span></p>
+            <p>email: <span id="userEmail"></span></p>
+            <p>job: <span id="userJob"></span></p>
+            <p>designation: <span id="userDesignation"></span></p>
+            <p>feedback for <span id="userProductChoice"></span>: <span id="userFeedback"></span></p>
+            <p>user experience: <span id="userExperience"></span></p>
+
+        </div>
+<script src="./product_survey.js"></script>
+
+
+    </body>
+   
+</html>
