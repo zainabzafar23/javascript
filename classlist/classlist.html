@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intital-scale=0.1">
+
+        <title>
+            classlist example
+        </title>
+        <style>
+            .highlight {
+                color:red;
+                font-weight: bold;
+            }
+
+            .italic{
+                font-style: italic;
+            }
+
+            .underline{
+                text-decoration:underline;
+            }
+
+            .strike{
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id="mypara" class="highlight">this is a paragraph</p>
+        <button onclick="performClassListOperations()">perform operations</button>
+
+        <script>
+            function performClassListOperations(){
+                const paragraph=document.getElementById('mypara');
+
+                paragraph.classList.add('italic');
+
+                paragraph.classList.remove('highlight');
+
+                paragraph.classList.toggle('underline',true);
+
+                const hasItalicClass=paragraph.classList.contains('italic');
+                console.log(`has italic class : ${hasItalicClass}`);
+
+                setTimeout(()=>{
+                    paragraph.classList.replace('underline','strike');
+
+                    const classString=paragraph.classList.toString();
+                    console.log(`current classes : ${classString}`);
+
+                },2000);
+            }
+        </script>
+    </body>
+</html>
